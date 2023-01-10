@@ -10,10 +10,31 @@ body {
   width: 800px;
   height: 600px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
   background-color: aqua;
+}
+
+.column {
+  display: flex;
+  gap: 10px ;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  align-self: center;
+  list-style: none;
+  width: 200px;
+  height: 20px;
+  /* background-color: bisque; */
+  border: 1px solid black;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 /* .calculator {
