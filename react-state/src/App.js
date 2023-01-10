@@ -13,6 +13,11 @@ export default function App() {
     setinputVal(event.target.value);
   };
 
+  function clear(index) {
+    todos.splice(index, 1);
+    setTodos([...todos]);
+  }
+
   return (
     <div className="App">
       <div className="column">
@@ -21,10 +26,18 @@ export default function App() {
       </div>
       <ul>
         {todos.map((todo, index) => (
-          <li key={index}>{todo}</li>
+          <li key={index}>
+            {todo}
+            <button
+              onClick={() => {
+                clear(index);
+              }}
+            >
+              clear
+            </button>
+          </li>
         ))}
       </ul>
-      {/* <button>delete</button> */}
     </div>
   );
 }
